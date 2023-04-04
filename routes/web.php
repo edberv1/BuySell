@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Show About
+Route::get('/about', function(){
+    return view('about');
+});
+
+//Show Contact
+Route::get('contact-us', [ContactController::class, 'index']);
+Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
+
+//Show Marketplace
+Route::get('/home', [ListingController::class, 'home'])->name('home');
