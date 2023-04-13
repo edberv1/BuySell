@@ -11,7 +11,7 @@
                       </svg>
                 </div>
                 <div>
-                    <h1 class="text-xl text-gray-500 md:text-5xl pb-4 md:pb-8 font-bold">OUR TEAM</h1>
+                    <h1 class="text-xl text-black md:text-5xl pb-4 md:pb-8 font-bold">OUR TEAM</h1>
                     <p class="text-laravel pr-12 text-sm md:text-xl">This is the team that takes care of our clients!</p>
                 </div>
             </div>
@@ -129,7 +129,7 @@
   
         <!-- Section: Design Block -->
         <section class="mb-32 text-center">
-          <h2 class="text-3xl text-gray-500 font-bold mb-12">
+          <h2 class="text-3xl text-black font-bold mb-12">
             There are good reasons to <span class="text-laravel">be proud</span>
           </h2>
           <div class="grid lg:gap-x-12 md:grid-cols-3">
@@ -147,7 +147,7 @@
                 </svg>
               </div>
               <h3 class="text-2xl font-bold text-laravel mb-4">1000+</h3>
-              <h5 class="text-lg font-medium text-gray-500">HAPPY COSTUMERS</h5>
+              <h5 class="text-lg font-medium text-black">HAPPY COSTUMERS</h5>
             </div>
       
             <div class="mb-12 md:mb-0">
@@ -164,7 +164,7 @@
                 </svg>
               </div>
               <h3 class="text-2xl font-bold text-laravel mb-4">70%</h3>
-              <h5 class="text-lg font-medium text-gray-500">GROWTH</h5>
+              <h5 class="text-lg font-medium text-black">GROWTH</h5>
             </div>
       
             <div class="mb-12 md:mb-0">
@@ -181,7 +181,7 @@
                 </svg>
               </div>
               <h3 class="text-2xl font-bold text-laravel mb-4">50+</h3>
-              <h5 class="text-lg font-medium text-gray-500">TEAM SIZE</h5>
+              <h5 class="text-lg font-medium text-black">TEAM SIZE</h5>
             </div>
           </div>
         </section>
