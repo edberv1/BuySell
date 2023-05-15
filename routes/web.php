@@ -45,3 +45,6 @@ Route::get('/about', function(){
 
 //Show Create Form
 Route::get('/listings/create', [ListingController::class, 'create'])->middleware('auth');
+
+// All Listings
+Route::get('/', [ListingController::class, 'index']);
