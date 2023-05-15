@@ -42,3 +42,6 @@ Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 Route::get('/about', function(){
     return view('about');
 });
+
+//Show Create Form
+Route::get('/listings/create', [ListingController::class, 'create'])->middleware('auth');
