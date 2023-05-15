@@ -28,3 +28,6 @@ Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us
 
 //Show Marketplace
 Route::get('/home', [ListingController::class, 'home'])->name('home');
+
+//Show Login Form
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
