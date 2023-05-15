@@ -37,3 +37,8 @@ Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 //Log User Out
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
+
+//Show About
+Route::get('/about', function(){
+    return view('about');
+});
