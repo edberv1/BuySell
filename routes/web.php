@@ -31,3 +31,6 @@ Route::get('/home', [ListingController::class, 'home'])->name('home');
 
 //Show Login Form
 Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
+
+//Log In User
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
