@@ -78,7 +78,7 @@
       sidebar.classList.toggle('-translate-x-full');
     });
   });
-
+  
 </script>
 
 <div class="p-4 sm:ml-64">
@@ -220,7 +220,13 @@
                 </td>
                 <td class="px-6 py-4">                    
                     <button class=" text-blue-900"><i class="mdi mdi-account-edit mdi-36px"></i></button>
-                    
+                    <button class="text-red-900" onclick="event.preventDefault(); if(confirm('Are you sure you want to delete this user?')) { document.getElementById('delete-form-{{ $item->id }}').submit(); }">
+  <i class="mdi mdi-account-remove mdi-36px"></i>
+</button>
+<form id="delete-form-{{ $item->id }}" action="{{ route('users.destroy', $item->id) }}" method="POST" style="display: none;">
+  @csrf
+  @method('DELETE')
+</form>
                 </td>
             </tr>
             @endforeach
