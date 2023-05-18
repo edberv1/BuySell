@@ -1,8 +1,11 @@
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
 
 
 
+  
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+
+  
 <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
    <span class="sr-only">Open sidebar</span>
    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +69,31 @@
       </ul>
    </div>
 </aside>
+<!-- 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
 
+  // Function to toggle the sidebar
+  function toggleSidebar() {
+    var sidebar = document.getElementById("default-sidebar");
+    sidebar.classList.toggle("hidden");
+  }
+
+  // Event listener for the button click
+  var button = document.querySelector('button[data-drawer-toggle="default-sidebar"]');
+  button.addEventListener('click', toggleSidebar);
+
+  // Optional: Event listener to close the sidebar when clicking outside of it
+  var sidebar = document.getElementById("default-sidebar");
+  document.addEventListener('click', function(event) {
+    var target = event.target;
+    if (target !== sidebar && !sidebar.contains(target) && !button.contains(target)) {
+      sidebar.classList.add("hidden");
+    }
+  });
+
+});
+</script> -->
 
 <div class="p-4 sm:ml-64">
 
@@ -146,9 +173,11 @@
     </div>
 
     </div>
+    
+    
 
-
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
           <header class="card-header" id="users">
             <p class="card-header-title">
               <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
@@ -213,7 +242,7 @@
 </div>
 
 
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
           <header class="card-header" id="posts">
             <p class="card-header-title">
               <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
@@ -289,6 +318,7 @@
     </table>
 </div>
 
+
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
           <header class="card-header" id="contacts">
             <p class="card-header-title">
@@ -358,3 +388,7 @@
         </tbody>
     </table>
 </div>
+
+
+
+ 
