@@ -299,6 +299,13 @@
                 <td class="px-6 py-4">      
                 <button class=" text-blue-900"><i class="mdi mdi-account-edit mdi-36px"></i></button>
 
+                   <a href="{{ route('listings.destroy', $item->id) }}" class="text-red-900" onclick="event.preventDefault(); if(confirm('Are you sure you want to delete this post?')) document.getElementById('delete-listing-{{ $item->id }}').submit();">
+                       <i class="mdi mdi-account-remove mdi-36px"></i>
+                    </a>
+                    <form id="delete-listing-{{ $item->id }}" action="{{ route('listings.destroy', $item->id) }}" method="POST" style="display: none;">
+                    @csrf
+                    @method('DELETE')
+                  </form>
               </td>
             </tr>
             @endforeach
