@@ -1,11 +1,11 @@
+
 <script src="https://cdn.tailwindcss.com"></script>
+<x-flash-message />
 
-
-
-  
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
 
-  
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
 <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
    <span class="sr-only">Open sidebar</span>
    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +17,7 @@
    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2 font-medium">
          <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <a href="/dashboard" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
                <span class="ml-3">Dashboard</span>
             </a>
@@ -69,31 +69,17 @@
       </ul>
    </div>
 </aside>
-<!-- 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    const sidebarToggle = document.querySelector('[data-drawer-toggle="default-sidebar"]');
+    const sidebar = document.getElementById('default-sidebar');
 
-  // Function to toggle the sidebar
-  function toggleSidebar() {
-    var sidebar = document.getElementById("default-sidebar");
-    sidebar.classList.toggle("hidden");
-  }
-
-  // Event listener for the button click
-  var button = document.querySelector('button[data-drawer-toggle="default-sidebar"]');
-  button.addEventListener('click', toggleSidebar);
-
-  // Optional: Event listener to close the sidebar when clicking outside of it
-  var sidebar = document.getElementById("default-sidebar");
-  document.addEventListener('click', function(event) {
-    var target = event.target;
-    if (target !== sidebar && !sidebar.contains(target) && !button.contains(target)) {
-      sidebar.classList.add("hidden");
-    }
+    sidebarToggle.addEventListener('click', function() {
+      sidebar.classList.toggle('-translate-x-full');
+    });
   });
 
-});
-</script> -->
+</script>
 
 <div class="p-4 sm:ml-64">
 
@@ -232,8 +218,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td class="px-6 py-4">
                 {{ $item->created_at }}
                 </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                <td class="px-6 py-4">                    
+                    <button class=" text-blue-900"><i class="mdi mdi-account-edit mdi-36px"></i></button>
+                    
                 </td>
             </tr>
             @endforeach
@@ -309,9 +296,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td class="px-6 py-4">
                 {{ $item->created_at }}
                 </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td>
+                <td class="px-6 py-4">      
+                <button class=" text-blue-900"><i class="mdi mdi-account-edit mdi-36px"></i></button>
+
+              </td>
             </tr>
             @endforeach
         </tbody>
@@ -380,8 +368,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td class="px-6 py-4">
                 {{ $item->created_at }}
                 </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                <td class="px-6 py-4">                    
+                    <button class="text-blue-900"><i class="mdi mdi-account-edit mdi-36px"></i></button>
+                    <form action="{{ route('deleteContact', $item->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="text-red-900">
+                            <i class="mdi mdi-account-remove mdi-36px"></i>
+                        </button>
+                    </form>
+                    
                 </td>
             </tr>
             @endforeach
