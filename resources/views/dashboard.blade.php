@@ -66,3 +66,83 @@
       </ul>
    </div>
 </aside>
+
+
+<div class="p-4 sm:ml-64">
+
+<section class="section main-section">
+      
+  <div class="lg:grid lg:grid-cols-4 lg:justify-between mb-10 gap-5 space-y-4 md:space-y-0 mx-4">
+
+  
+          
+    <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Users</h5>
+        <div class="flex items-baseline text-gray-900 dark:text-white">
+            
+            <span class="icon widget-icon text-green-500"><i class="mdi mdi-account-multiple mdi-48px"></i></span>
+        </div>
+       
+        <ul role="list" class="space-y-5 my-7">
+            <li class="flex space-x-3">
+                
+                <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">{{ $users }} users</span>
+            </li>
+        </ul>
+        <a href="#users" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">View All Users</a>
+    </div>
+
+    <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Admins</h5>
+        <div class="flex items-baseline text-gray-900 dark:text-white">
+            
+        <span class="icon widget-icon text-red-500"><i class="mdi mdi-comment-account-outline mdi-48px"></i></span>
+        </div>
+        
+        <ul role="list" class="space-y-5 my-7">
+            <li class="flex space-x-3">
+                
+                <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">{{ $admins }} admins</span>
+            </li>
+</ul>
+    </div>
+
+          <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Posts</h5>
+        <div class="flex items-baseline text-gray-900 dark:text-white">
+            
+        <span class="icon widget-icon text-blue-500"><i class="mdi mdi-arrow-down-bold-box-outline mdi-48px"></i></span>
+        </div>
+     
+        <ul role="list" class="space-y-5 my-7">
+            <li class="flex space-x-3">
+             
+                <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">{{$listing}} Posts</span>
+            </li>
+        </ul>
+        <a href="#posts" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">View All Posts</a>
+    </div>
+          
+      
+
+          <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Contacts</h5>
+        <div class="flex items-baseline text-gray-900 dark:text-white">
+            
+        <span class="icon widget-icon text-blue-500"><i class="mdi mdi-email-open-outline mdi-48px"></i></span>
+        </div>
+     
+        <ul role="list" class="space-y-5 my-7">
+            <li class="flex space-x-3">
+             
+                <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">{{$contact}} contacts</span>
+            </li>
+        </ul>
+        <a href="#contacts" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">View All Messages</a>
+    </div>
+
+    </div>
