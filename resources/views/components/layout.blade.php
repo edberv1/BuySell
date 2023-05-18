@@ -15,11 +15,6 @@
     <script>
         tailwind.config = {
             theme: {
-
-                backgroundImage: {
-                    'cube': "url('https://www.starlabs.dev/wp-content/themes/starlabs-web/public/assets/whoweare-cubes-1.png')",
-                 },
-    
                 extend: {
                     colors: {
                         laravel: "#F62006",
@@ -108,7 +103,14 @@
             <li class="hover:text-laravel {{ '/about' == request()->path() ? 'text-laravel' : '' }}">
               <a href="/about" class="block py-2 pl-3 pr-4 rounded text-xl md:p-0">About</a>
             </li>
-            
+            @if(Auth::check() && Auth::user()->roles == 'admin')
+            <li class="hover:fill-laravel">
+            <a href="/dashboard" class="block py-2 pl-3 pr-4 rounded text-xl md:p-0">
+               <svg aria-hidden="true" class="w-8 h-8 dark:text-laravel group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                
+            </a>
+            </li>
+            @endif
           </ul>
         </div>
 
@@ -190,18 +192,6 @@
       </div>
     </div>
 </footer>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <x-flash-message />
 
