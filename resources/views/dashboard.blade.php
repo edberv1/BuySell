@@ -338,7 +338,49 @@
                
 </div>
 
+<div x-data="{ isOpen: false }">
+                      <!-- Modal Open Button -->
+                      <button @click="isOpen = true" x-bind:href="`{{ route('listings.edition', $item) }}`" class="text-blue-900">
+                          <i class="mdi mdi-account-edit mdi-36px"></i>
+                      </button>
 
+                <!-- Modal -->
+                  <div x-show="isOpen" class="fixed inset-0 flex items-center justify-center z-50">
+                        <div class="bg-white rounded-lg p-8 w-1/2">
+                            <h1 class="text-xl font-bold mb-4">Editing Post: {{ $item->title }}</h1>
+
+                              <form action="{{ URL::route('listings.updation', $item) }}" method="POST">
+                                  @csrf
+                                  @method('PUT')
+
+                                
+                                <label for="title">Title:</label>
+                                <input type="text" name="title" id="title" value="{{ $item->title }}" class="border rounded-lg px-4 py-2 mb-4">
+
+                                <label for="tags">Tags:</label>
+                                <input type="text" name="tags" id="tags" value="{{ $item->tags }}" class="border rounded-lg px-4 py-2 mb-4">
+
+                                <label for="company">Price:</label>
+                                <input type="text" name="company" id="company" value="{{ $item->company }}" class="border rounded-lg px-4 py-2 mb-4">
+
+                                <label for="location">Location:</label>
+                                <input type="text" name="location" id="location" value="{{ $item->location }}" class="border rounded-lg px-4 py-2 mb-4">
+
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" value="{{ $item->email }}" class="border rounded-lg px-4 py-2 mb-4">
+
+                                <label for="website">Website:</label>
+                                <input type="text" name="website" id="website" value="{{ $item->website }}" class="border rounded-lg px-4 py-2 mb-4">
+
+                                <label for="description">Description:</label>
+                                <input type="text" name="description" id="description" value="{{ $item->description }}" class="border rounded-lg px-4 py-2 mb-4">
+
+                                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                                  Update
+                                </button>
+                            </form>
+                      </div>
+                </div>
 
 
 
