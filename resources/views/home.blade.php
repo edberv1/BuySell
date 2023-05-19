@@ -58,3 +58,7 @@
 
             </div>
         </section>
+
+        @include('contactForm')
+
+    </x-layout>
