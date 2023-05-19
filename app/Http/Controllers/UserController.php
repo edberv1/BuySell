@@ -14,6 +14,7 @@ class UserController extends Controller
         return view('users.register');
     }
 
+
     //Create New User
     public function store(Request $request){
         $formFields = $request->validate([
@@ -49,6 +50,23 @@ class UserController extends Controller
         return view('users.login');
     }
 
+
+    public function edit(User $user)
+    {
+        return view('users.edit', compact('user'));
+    }
+
+    public function update(Request $request, User $user)
+{
+    $data = $request->except(['_token', '_method']);
+    $user->update($data);
+
+    return redirect()->back()->with('success', 'User updated successfully.');
+}
+
+
+
+
     //Check if admin
     public function isAdmin(User $user)
     {
@@ -61,19 +79,19 @@ class UserController extends Controller
             'email' => ['required', 'email'],
             'password' => 'required'
         ]);
-        
+
         if (auth()->attempt($formFields)) {
             $request->session()->regenerate();
-            $user = Auth::user();
 
+            $user = Auth::user();
             if ($this->isAdmin($user)) {
-                
-                return redirect('/dashboard')->with('message', 'Welcome Admin');
+
+                return redirect('/dashboard')->with('message', 'Welomen Admin');
             } else {
                 return redirect('/')->with('message', 'You are now logged in!');
             }
         }
-    
+
         return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');
     }
 
