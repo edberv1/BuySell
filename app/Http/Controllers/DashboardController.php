@@ -24,4 +24,10 @@ class DashboardController extends Controller
         return view('dashboard', compact('userat','users', 'admins', 'listing', 'contact', 'posts', 'contacts'));
     }
 
+    public function destroy(Listing $listing)
+    {
+        $listing->delete();
+        return redirect()->back()->with('message', 'Listing deleted successfully.');
+    }
+
 }
