@@ -22,8 +22,6 @@
                 },
             },
         };
-
-        
     </script>
     <style>
         body{
@@ -192,6 +190,18 @@
       </div>
     </div>
 </footer>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <x-flash-message />
 
