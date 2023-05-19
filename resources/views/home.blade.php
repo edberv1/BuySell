@@ -19,3 +19,30 @@
               </div>
             </div>
           </section>
+
+          <section class="p-6 shadow-lg shadow-red-200 text-black  backdrop-blur-xl ">
+            <div class="container p-4 mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12">Trusted by the best</h2>
+            </div>
+            <div class="container flex flex-wrap justify-center mx-auto dark:text-black">
+                <div class="flex justify-center w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4">
+                    <img src="https://autosallonialberti.net/wp-content/uploads/2020/12/logo_auto_alberti_zi.png" alt="" class="hover:animate-pulse">
+                </div>
+
+                <div class="flex justify-center  w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4 border-l-2 border-laravel space-x-2s">
+                    <div class="container p-4 mx-auto text-center">
+                        <h2 class="text-4xl font-bold hover:animate-pulse">SHERRETI</h2>
+                    </div>
+                </div>
+                <div class="flex justify-center w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4 border-l-2 border-laravel space-x-2s">
+                    <img src="https://autosallonialberti.net/wp-content/uploads/2020/12/logo_auto_alberti_zi.png" alt="" class="hover:animate-pulse">
+                </div>
+                <div class="flex justify-center w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4 border-l-2 border-laravel space-x-2s">
+                    <div class="container p-4 mx-auto text-center">
+                        <h2 class="text-4xl font-bold hover:animate-pulse">SHERRETI</h2>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
