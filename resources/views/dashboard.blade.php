@@ -78,7 +78,6 @@
       sidebar.classList.toggle('-translate-x-full');
     });
   });
-  
 </script>
 
 <div class="p-4 sm:ml-64">
@@ -219,7 +218,10 @@
                 {{ $item->created_at }}
                 </td>
                 <td class="px-6 py-4">                    
-                    <button class=" text-blue-900"><i class="mdi mdi-account-edit mdi-36px"></i></button>
+                    
+
+             
+
                     <button class="text-red-900" onclick="event.preventDefault(); if(confirm('Are you sure you want to delete this user?')) { document.getElementById('delete-form-{{ $item->id }}').submit(); }">
   <i class="mdi mdi-account-remove mdi-36px"></i>
 </button>
@@ -233,7 +235,6 @@
         </tbody>
     </table>
 </div>
-
 
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
           <header class="card-header" id="posts">
@@ -303,7 +304,35 @@
                 {{ $item->created_at }}
                 </td>
                 <td class="px-6 py-4">      
-                <button class=" text-blue-900"><i class="mdi mdi-account-edit mdi-36px"></i></button>
+               
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                    <a href="{{ route('listings.destroy', $item->id) }}" class="text-red-900" onclick="event.preventDefault(); if(confirm('Are you sure you want to delete this post?')) document.getElementById('delete-listing-{{ $item->id }}').submit();">
                        <i class="mdi mdi-account-remove mdi-36px"></i>
