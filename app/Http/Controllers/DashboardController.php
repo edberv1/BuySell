@@ -39,4 +39,14 @@ class DashboardController extends Controller
         return Redirect::back()->with('message', 'User deleted successfully');
     }
 
+    public function delete($id)
+{
+    $contact = Contact::findOrFail($id);
+    $contact->delete();
+
+    // You can add any additional logic or redirection here
+
+    return redirect()->back()->with('success', 'Contact deleted successfully.');
+}
+
 }
