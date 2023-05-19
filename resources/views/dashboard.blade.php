@@ -220,7 +220,38 @@
                 <td class="px-6 py-4">                    
                     
 
-             
+                <div x-data="{ isOpen: false }">
+                      <!-- Modal Open Button -->
+                      <button @click="isOpen = true" x-bind:href="`{{ route('users.edit', $item) }}`" class="text-blue-900">
+                          <i class="mdi mdi-account-edit mdi-36px"></i>
+                      </button>
+
+                <!-- Modal -->
+                  <div x-show="isOpen" class="fixed inset-0 flex items-center justify-center z-50">
+                        <div class="bg-white rounded-lg p-8 w-1/2">
+                            <h1 class="text-xl font-bold mb-4">Editing User: {{ $item->name }}</h1>
+
+                              <form action="{{ URL::route('users.update', $item) }}" method="POST">
+                                  @csrf
+                                  @method('PUT')
+
+                                
+                                <label for="name">Name:</label>
+                                <input type="text" name="name" id="name" value="{{ $item->name }}" class="border rounded-lg px-4 py-2 mb-4">
+
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" value="{{ $item->email }}" class="border rounded-lg px-4 py-2 mb-4">
+
+                                <label for="roles">Role:</label>
+                                <input type="text" name="roles" id="roles" value="{{ $item->roles }}" class="border rounded-lg px-4 py-2 mb-4">
+
+                                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                                  Update
+                                </button>
+                            </form>
+                      </div>
+                </div>
+</div>
 
                     <button class="text-red-900" onclick="event.preventDefault(); if(confirm('Are you sure you want to delete this user?')) { document.getElementById('delete-form-{{ $item->id }}').submit(); }">
   <i class="mdi mdi-account-remove mdi-36px"></i>
