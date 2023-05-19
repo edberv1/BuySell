@@ -30,4 +30,13 @@ class DashboardController extends Controller
         return redirect()->back()->with('message', 'Listing deleted successfully.');
     }
 
+    public function userDestroy(User $user)
+    {
+        // Delete the user from the database
+        $user->delete();
+
+        // Redirect to the desired page after deletion
+        return Redirect::back()->with('message', 'User deleted successfully');
+    }
+
 }
