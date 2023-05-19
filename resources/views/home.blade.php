@@ -20,6 +20,18 @@
             </div>
           </section>
 
+          <div class="lg:grid lg:grid-cols-4 lg:justify-between mb-10 gap-5 space-y-4 md:space-y-0 mx-4">
+            
+            @unless(count($listings) == 0)
+                @foreach ($listings as $listing)
+                    <x-listing-card :listing="$listing"/>
+                @endforeach
+            @else
+                <p>No posts founds.</p>
+            @endunless
+        </div>
+        
+
           <section class="p-6 shadow-lg shadow-red-200 text-black  backdrop-blur-xl ">
             <div class="container p-4 mx-auto text-center">
                 <h2 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12">Trusted by the best</h2>
