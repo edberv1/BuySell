@@ -1,4 +1,3 @@
-div
 <script src="https://cdn.tailwindcss.com"></script>
 <x-flash-message />
 
