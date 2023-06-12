@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
-
 use App\Models\User;
 use App\Models\Listing;
 use App\Models\Contact;
@@ -48,5 +47,10 @@ class DashboardController extends Controller
 
     return redirect()->back()->with('success', 'Contact deleted successfully.');
 }
+
+
+
+
+
 
 }
