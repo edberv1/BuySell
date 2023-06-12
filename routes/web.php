@@ -22,9 +22,14 @@ Route::get('/about', function(){
     return view('about');
 });
 
+// Dashboard
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware('admin');
+
 //Show Contact
 Route::get('contact-us', [ContactController::class, 'index']);
 Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
+
+Route::post('/listings', [ListingController::class, 'storing'])->name('listings.storing');
 
 //Show Marketplace
 Route::get('/home', [ListingController::class, 'home'])->name('home');
