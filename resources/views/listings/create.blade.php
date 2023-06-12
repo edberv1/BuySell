@@ -11,7 +11,7 @@
             @csrf
             <div class="mb-6">
                 <label for="company" class="inline-block text-lg mb-2">Car Price</label>
-       
+
                     <input type="text" class="border border-gray-200 rounded p-2 w-full" name="company"
                 value="{{old('company')}}" />
 
@@ -23,16 +23,12 @@
             <div class="mb-6">
                 <label for="title" class="inline-block text-lg mb-2">Post Title</label>
                 <input type="text" class="border border-gray-200 rounded p-2 w-full" name="title"
-                    placeholder="Example: Audi, SUV, etc" value="{{old('title')}}" />
+                    placeholder="Example: Tesla Model S" value="{{old('title')}}" />
 
                 @error('title')
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                 @enderror
             </div>
-
-
-
-            
 
             <div class="mb-6">
                 <label for="location" class="inline-block text-lg mb-2">Location</label>
@@ -46,7 +42,7 @@
 
             <div class="mb-6">
                 <label for="email" class="inline-block text-lg mb-2">Contact Email</label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="email" 
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="email"
                 placeholder="example@mail.com"
                 value="{{old('email')}}" />
 
@@ -73,7 +69,7 @@
                     Tags
                 </label>
                 <input type="text" class="border border-gray-200 rounded p-2 w-full" name="tags"
-                    placeholder="Example: Mercedes, Diesel, etc"
+                    placeholder="Example: Mercedes, White, SUV"
                     value="{{old('tags')}}" />
 
                 @error('tags')
@@ -83,9 +79,9 @@
 
             <div class="mb-6">
                 <label for="logo" class="inline-block text-lg mb-2">
-                    Image
+                    Images
                 </label>
-                <input type="file" class="border border-gray-200 rounded p-2 w-full" name="logo" />
+                <input type="file" class="border border-gray-200 rounded p-2 w-full" name="logo[]" multiple />
 
                 @error('logo')
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
