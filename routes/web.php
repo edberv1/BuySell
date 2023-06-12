@@ -44,7 +44,7 @@ Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->midd
 // All Listings
 Route::get('/', [ListingController::class, 'index']);
 
-//Delete Lisitng
+//Delete Listing
 Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->middleware('auth');
 
 //Show Create Form
