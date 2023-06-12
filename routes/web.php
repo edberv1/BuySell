@@ -30,7 +30,7 @@ Route::get('contact-us', [ContactController::class, 'index']);
 Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 
 Route::post('/listings', [ListingController::class, 'storing'])->name('listings.storing');
-
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->middleware('auth');
 //Show Marketplace
 Route::get('/home', [ListingController::class, 'home'])->name('home');
 
