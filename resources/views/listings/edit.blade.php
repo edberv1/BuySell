@@ -11,7 +11,7 @@
             @csrf
             @method('PUT')
             <div class="mb-6">
-                <label for="company" class="inline-block text-lg mb-2">Vehicle Type</label>
+                <label for="company" class="inline-block text-lg mb-2">Price</label>
                 <input type="text" class="border border-gray-200 rounded p-2 w-full" name="company"
                  value="{{$listing->company}}" />
                 @error('company')
@@ -41,7 +41,7 @@
 
             <div class="mb-6">
                 <label for="email" class="inline-block text-lg mb-2">Contact Email</label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="email" 
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="email"
                 value="{{$listing->email}}" />
 
                 @error('email')
@@ -94,7 +94,7 @@
                     Car Description
                 </label>
                 <textarea class="border border-gray-200 rounded p-2 w-full" name="description" rows="10"
-                    placeholder="Include tasks, requirements, salary, etc" >
+                >
                     {{$listing->description}}
                 </textarea>
 
