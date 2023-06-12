@@ -10,6 +10,7 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://unpkg.com/@splidejs/splide@3.4.13/dist/css/splide.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -22,6 +23,7 @@
                 },
             },
         };
+
     </script>
     <style>
         body{
@@ -32,20 +34,22 @@
 </head>
 
 <body>
+
+
       <nav class="bg-[#E3E3E3]">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-8">
             <a href="/home" class="flex items-center">
                 <img src="images/logo.png" class="h-14 mr-3" alt="BuySell Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark">BuySell</span>
             </a>
-          
+
         <div class="flex items-center md:order-2">
-            
+
             <button type="button" class="hover:animate-pulse flex mr-3 text-sm  rounded-full md:mr-0" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
               <span class="sr-only ">Open user menu</span>
               <img class="w-8 h-8 rounded-full" src="images/user.png" alt="user photo">
             </button>
-            
+
             <!-- Dropdown menu -->
             <div class="z-50 hidden my-4 text-base list-none divide-y divide-gray-100 rounded-lg shadow dark:bg-[#e3e3e3] dark:divide-gray-600" id="user-dropdown">
               <div class="px-4 py-3">
@@ -53,7 +57,7 @@
                 <span class="block text-lg">{{auth()->user()->name}}</span>
                 <span class="block text-sm truncate">{{auth()->user()->email}}</span>
                 @endauth
-              </div> 
+              </div>
 
 
               <ul class="py-2" aria-labelledby="user-menu-button">
@@ -69,16 +73,16 @@
                         <button type="submit" class="block px-4 py-2 text-sm text-neutral-950 hover:bg-gray-800 dark:hover:bg-gray-300 dark:text-black hover:text-laravel">
                             <i class="fa-solid fa-door-closed"></i>Logout
                         </button>
-                        </form> 
+                        </form>
                     </li>
                 @else
 
 
                 <li><a href="/register" class="block px-6 py-2 text-sm text-neutral-950 hover:bg-gray-800 dark:hover:bg-gray-300 dark:text-black hover:text-laravel"><i class="fa-solid fa-user-plus"></i> Register</a></li>
-    
-                  
+
+
                  <li> <a href="/login" class="block px-6 py-2 text-sm hover:bg-gray-800 dark:hover:bg-gray-300 dark:text-black hover:text-laravel"><i class="fa-solid fa-arrow-right-to-bracket"></i>  Login</a></li>
-            
+
 
                 @endauth
               </ul>
@@ -105,14 +109,14 @@
             <li class="hover:fill-laravel">
             <a href="/dashboard" class="block py-2 pl-3 pr-4 rounded text-xl md:p-0">
                <svg aria-hidden="true" class="w-8 h-8 dark:text-laravel group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
-                
+
             </a>
             </li>
             @endif
           </ul>
         </div>
 
-        
+
         </div>
       </nav>
 
