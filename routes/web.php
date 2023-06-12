@@ -43,6 +43,9 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 //Log In User
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
+//Delete Lisitng
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->middleware('auth');
+
 //Log User Out
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
