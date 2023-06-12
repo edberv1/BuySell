@@ -44,7 +44,7 @@ Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 Route::get('/users/{user}/edit', 'App\Http\Controllers\UserController@edit')->name('users.edit');
-
+Route::put('/users/{user}', 'App\Http\Controllers\UserController@update')->name('users.update');
 //Show About
 Route::get('/about', function(){
     return view('about');
