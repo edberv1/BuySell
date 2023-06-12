@@ -22,6 +22,9 @@ Route::get('/about', function(){
     return view('about');
 });
 
+// Dashboard
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware('admin');
+
 //Show Contact
 Route::get('contact-us', [ContactController::class, 'index']);
 Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
