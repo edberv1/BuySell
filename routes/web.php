@@ -43,6 +43,8 @@ Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 //Log User Out
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
+Route::get('/users/{user}/edit', 'App\Http\Controllers\UserController@edit')->name('users.edit');
+
 //Show About
 Route::get('/about', function(){
     return view('about');
