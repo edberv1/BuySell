@@ -1,4 +1,4 @@
-<section class="">
+<section>
     <svg
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
@@ -36,42 +36,32 @@
                 <div class="relative h-56 overflow-hidden" style="height: 500px;">
                      <!-- Item 1 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="https://rare-gallery.com/mocahbig/422238-Forza-Horizon-4-Lamborghini-Aventador-SVJ-video-games.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        <img src="https://img.freepik.com/free-photo/grey-metallic-jeep-with-blue-stripe-it_114579-4080.jpg?w=1380&t=st=1686348837~exp=1686349437~hmac=4e4bcab761632ce8e7a068f2d04661f4553a224fe0d5ef88ef5697446a942f64" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                     <!-- Item 2 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/649c549e-12b4-40c6-9294-7e996b8d3ccb/bvlatuR/std/4096x3071/Model-S-Specs-Hero-Desktop-LHD" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        <img src="https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1380&t=st=1686348899~exp=1686349499~hmac=b19fc804b6a1018a3620558b64b07f437e783f31ec282be9384745c9b2e5c4e3" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                     <!-- Item 3 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="https://getwallpapers.com/wallpaper/full/e/2/e/1039027-nissan-gtr-wallpaper-1920x1080-for-4k.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        <img src="https://img.freepik.com/free-photo/blue-jeep-parking-public-zone_114579-4042.jpg?w=1380&t=st=1686348764~exp=1686349364~hmac=76c6960fa4f823428b35f67627662617e01a4cf7f76b213bddc812dfd8f2692c" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                     <!-- Item 4 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="https://rare-gallery.com/mocahbig/422238-Forza-Horizon-4-Lamborghini-Aventador-SVJ-video-games.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        <img src="https://img.freepik.com/free-photo/red-mini-coupe-driving-highway-with-high-speed_114579-4060.jpg?w=1380&t=st=1686348764~exp=1686349364~hmac=a6d7b0d0ad7c8438cf52fd8a710bf41050d76628b2ea30a808599d17acd783c4" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                     <!-- Item 5 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="https://rare-gallery.com/mocahbig/422238-Forza-Horizon-4-Lamborghini-Aventador-SVJ-video-games.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        <img src="https://img.freepik.com/free-photo/sport-car-with-black-white-autotuning_114579-4075.jpg?w=1380&t=st=1686348929~exp=1686349529~hmac=8a86e3d9e65ccfc029a2f07b72ac69f5790bf5e23d3e0568d448bfba3b73d9ca" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                 </div>
-                <!-- Slider controls -->
-                <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                        <span class="sr-only">Previous</span>
-                    </span>
-                </button>
-                <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        <span class="sr-only">Next</span>
-                    </span>
-                </button>
+
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+
 
