@@ -13,54 +13,80 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Dashboard
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware('admin');
+
+// All Listings
+Route::get('/', [ListingController::class, 'index']);
+
+//Show Create Form
+Route::get('/listings/create', [ListingController::class, 'create'])->middleware('auth');
+
+Route::post('/listings', [ListingController::class, 'storing'])->name('listings.storing');
+
+//Store Listing
+// Route::post('/listings', [ListingController::class, 'store'])->middleware('auth');
+//Update Listing
+// Route::put('/listings/{listing}', [ListingController::class, 'update'])->middleware('auth');
+
+//Show Edit Form
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->middleware('auth');
+
+
+Route::get('/users/{user}/edit', 'App\Http\Controllers\UserController@edit')->name('users.edit');
+Route::put('/users/{user}', 'App\Http\Controllers\UserController@update')->name('users.update');
+
+Route::get('/listings/{listing}/edition', 'App\Http\Controllers\ListingController@edition')->name('listings.edition');
+Route::put('/listings/{listing}', 'App\Http\Controllers\ListingController@updation')->name('listings.updation');
+
+
+
+
+//Delete Lisitng
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->middleware('auth');
+
+//Admin Delete Listing
+Route::delete('/listings/{listing}', 'App\Http\Controllers\DashboardController@destroy')->name('listings.destroy');
+
+//Admin Delete User
+Route::delete('/users/{user}', 'App\Http\Controllers\DashboardController@userDestroy')->name('users.destroy');
+
+//Manage Listings
+Route::get('listings/manage', [ListingController::class, 'manage'])->middleware('auth');
+
+//Single Listing
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
+
+//Show Register Create Form
+Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 
 //Show About
 Route::get('/about', function(){
     return view('about');
 });
 
-// Dashboard
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware('admin');
-
 //Show Contact
 Route::get('contact-us', [ContactController::class, 'index']);
 Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 
-Route::post('/listings', [ListingController::class, 'storing'])->name('listings.storing');
-Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->middleware('auth');
+Route::delete('/contact-us/{id}', 'App\Http\Controllers\DashboardController@delete')->name('deleteContact');
+
 //Show Marketplace
 Route::get('/home', [ListingController::class, 'home'])->name('home');
 
-Route::get('/listings/{listing}/edition', 'App\Http\Controllers\ListingController@edition')->name('listings.edition');
-Route::put('/listings/{listing}', 'App\Http\Controllers\ListingController@updation')->name('listings.updation');
+//Create New User
+Route::post('/user', [UserController::class, 'store']);
+
+//Create a new user AdminDashboard
+Route::post('/users', 'App\Http\Controllers\UserController@creating')->name('users.creating');
+Route::get('/users', 'App\Http\Controllers\UserController@index')->name('users.index');
+
+
+//Log User Out
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 //Show Login Form
 Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 
 //Log In User
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
-
-//Admin Delete Listing
-Route::delete('/listings/{listing}', 'App\Http\Controllers\DashboardController@destroy')->name('listings.destroy');
-
-//Delete Lisitng
-Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->middleware('auth');
-
-//Log User Out
-Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
-
-Route::get('/users/{user}/edit', 'App\Http\Controllers\UserController@edit')->name('users.edit');
-Route::put('/users/{user}', 'App\Http\Controllers\UserController@update')->name('users.update');
-//Show About
-Route::get('/about', function(){
-    return view('about');
-});
-
-//Show Create Form
-Route::get('/listings/create', [ListingController::class, 'create'])->middleware('auth');
-
-// All Listings
-Route::get('/', [ListingController::class, 'index']);
