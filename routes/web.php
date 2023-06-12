@@ -34,6 +34,9 @@ Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->midd
 //Show Marketplace
 Route::get('/home', [ListingController::class, 'home'])->name('home');
 
+Route::get('/listings/{listing}/edition', 'App\Http\Controllers\ListingController@edition')->name('listings.edition');
+Route::put('/listings/{listing}', 'App\Http\Controllers\ListingController@updation')->name('listings.updation');
+
 //Show Login Form
 Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 
