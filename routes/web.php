@@ -1,6 +1,15 @@
 <?php
 
+use App\Models\Listing;
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Logout;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ListingController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
