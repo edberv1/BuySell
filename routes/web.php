@@ -43,6 +43,9 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 //Log In User
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
+//Admin Delete Listing
+Route::delete('/listings/{listing}', 'App\Http\Controllers\DashboardController@destroy')->name('listings.destroy');
+
 //Delete Lisitng
 Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->middleware('auth');
 
