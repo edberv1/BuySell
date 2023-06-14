@@ -98,3 +98,8 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 
 //Log In User
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+//Comment 
+Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
+Route::put('/comments/{comment}', [CommentController::class, 'update'])->name('comments.update');
+Route::delete('/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy')->middleware('auth');
